@@ -21,21 +21,21 @@ jobs:
 
       - name: Run script
         env:
-          ZOTERO_ID: ${{ secrets.ZOTERO_ID }}
-          ZOTERO_KEY: ${{ secrets.ZOTERO_KEY }}
+          ZOTERO_ID: 17889134
+          ZOTERO_KEY: aaqh8bfSdiQb7UXq57sLl8On
           ZOTERO_IGNORE: ${{ vars.ZOTERO_IGNORE }}
+          ARXIV_QUERY: all:mesh
           SEND_EMPTY: ${{ vars.SEND_EMPTY }}
-          ARXIV_QUERY: ${{ secrets.ARXIV_QUERY }}
-          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SENDER: ${{ secrets.SENDER }}
-          RECEIVER: ${{ secrets.RECEIVER }}
-          SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
-          MAX_PAPER_NUM: ${{ secrets.MAX_PAPER_NUM }}
-          USE_LLM_API: ${{ secrets.USE_LLM_API }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_API_BASE: ${{ secrets.OPENAI_API_BASE }}
-          MODEL_NAME: ${{ secrets.MODEL_NAME }}
-          LANGUAGE: ${{ vars.LANGUAGE }}
+          SMTP_SERVER: smtp.qq.com
+          SMTP_PORT: 465
+          SENDER: 1094697804@qq.com
+          RECEIVER: 18091722183@163.com
+          SENDER_PASSWORD: glhnyvwigiwmhchb
+          MAX_PAPER_NUM: 3
+          USE_LLM_API: 0
+          OPENAI_API_KEY: sk-npihjnqynfptargsqrazsvfeetuilddoetkieanzzchvbvzk
+          OPENAI_API_BASE: https://api.siliconflow.cn/v1
+          MODEL_NAME: Qwen/Qwen2.5-7B-Instruct
+          LANGUAGE: Chinese
         run: |
           uv run main.py
