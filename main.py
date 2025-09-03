@@ -18,6 +18,8 @@ import feedparser
 
 def get_zotero_corpus(id:str,key:str) -> list[dict]:
     zot = zotero.Zotero(id, 'user', key)
+    print("id is "+id)
+    print("key is" + key)
     collections = zot.everything(zot.collections())
     collections = {c['key']:c for c in collections}
     corpus = zot.everything(zot.items(itemType='conferencePaper || journalArticle || preprint'))
