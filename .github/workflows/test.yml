@@ -29,7 +29,7 @@ jobs:
           SENDER: 1094697804@qq.com
           RECEIVER: 18091722183@163.com
           SENDER_PASSWORD: glhnyvwigiwmhchb
-          MAX_PAPER_NUM: 20
+          MAX_PAPER_NUM: 5
           USE_LLM_API: ${{ secrets.USE_LLM_API }}
           OPENAI_API_KEY: sk-npihjnqynfptargsqrazsvfeetuilddoetkieanzzchvbvzk
           OPENAI_API_BASE: https://api.siliconflow.cn/v1
