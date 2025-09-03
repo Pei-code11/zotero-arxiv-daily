@@ -53,12 +53,12 @@ def get_arxiv_paper(query:str, debug:bool=False) -> list[ArxivPaper]:
     feed = feedparser.parse(f"http://export.arxiv.org/api/query?search_query={query}")
     if 'Feed error for query' in feed.feed.title:
         raise Exception(f"Invalid ARXIV_QUERY: {query}.")
-        search = arxiv.Search(query=query, sort_by=arxiv.SortCriterion.SubmittedDate)
-        papers = []
-        for i in client.results(search):
-            papers.append(ArxivPaper(i))
-            if len(papers) == 3:
-                break
+    search = arxiv.Search(query=query, sort_by=arxiv.SortCriterion.SubmittedDate)
+    papers = []
+    for i in client.results(search):
+        papers.append(ArxivPaper(i))
+        if len(papers) == 3:
+            break
 
     return papers
 
