@@ -36,4 +36,4 @@ jobs:
           MODEL_NAME: Qwen/Qwen2.5-7B-Instruct
           LANGUAGE: Chinese
         run: |
-          uv run main.py
+          uv run main.py --debug
