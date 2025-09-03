@@ -22,7 +22,7 @@ jobs:
           ZOTERO_ID: 17889134
           ZOTERO_KEY: aaqh8bfSdiQb7UXq57sLl8On
           ZOTERO_IGNORE: ${{ vars.ZOTERO_IGNORE }}
-          ARXIV_QUERY: cs.CV+cs.MM+cs.IT+cs.GR+cs.LG
+          ARXIV_QUERY: cat:cs.CV+cs.MM+cs.IT+cs.GR+cs.LG+AND+all:\"data compression\"
           SEND_EMPTY: ${{ vars.SEND_EMPTY }}
           SMTP_SERVER: smtp.qq.com
           SMTP_PORT: 465
@@ -31,9 +31,9 @@ jobs:
           SENDER_PASSWORD: glhnyvwigiwmhchb
           MAX_PAPER_NUM: 20
           USE_LLM_API: ${{ secrets.USE_LLM_API }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_API_BASE: ${{ secrets.OPENAI_API_BASE }}
-          MODEL_NAME: ${{ secrets.MODEL_NAME }}
+          OPENAI_API_KEY: sk-npihjnqynfptargsqrazsvfeetuilddoetkieanzzchvbvzk
+          OPENAI_API_BASE: https://api.siliconflow.cn/v1
+          MODEL_NAME: Qwen/Qwen2.5-7B-Instruct
           LANGUAGE: Chinese
         run: |
           uv run main.py --debug
