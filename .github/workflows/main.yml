@@ -24,7 +24,7 @@ jobs:
           ZOTERO_ID: 17889134
           ZOTERO_KEY: aaqh8bfSdiQb7UXq57sLl8On
           ZOTERO_IGNORE: ${{ vars.ZOTERO_IGNORE }}
-          ARXIV_QUERY: (all:compression)OR(all:mesh)
+          ARXIV_QUERY: ((all:compression)OR(all:mesh))AND(cat:(cs.CG)OR(cs.CV)OR(cs.AI)OR(cs.LG)OR(cs.IT)OR(cs.GR))
           SEND_EMPTY: True
           SMTP_SERVER: smtp.qq.com
           SMTP_PORT: 465
